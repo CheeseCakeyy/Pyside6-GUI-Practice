@@ -42,9 +42,9 @@ class Myplots(QMainWindow):
     def plot1(self):
         self.figure.clear()
         ax =  self.figure.add_subplot(111)
-        x = np.random.randint(100,size=100)
-        y = np.random.randint(100,size=100)
-        colors = np.random.randint(100,size=100)
+        x = np.random.randint(200,size=100)
+        y = np.random.randint(200,size=100)
+        colors = np.random.randint(200,size=100)
         size = 10*np.random.randint(100,size=100)
         ax.scatter(x,y,c=colors,s=size,alpha=0.5,cmap='seismic_r')
         ax.set_title("Random scatter plot")  
@@ -77,4 +77,5 @@ class Myplots(QMainWindow):
 Manager = QApplication(sys.argv)
 window = Myplots()
 window.show()
+
 Manager.exec()
